@@ -26,6 +26,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'consuming_facebook.Person'
 
 # Application definition
 
@@ -36,7 +37,16 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'luizalabs.consuming_facebook',
 )
+
+# EXTERNAL APPS
+
+EXTERNAL = (
+    'rest_framework',
+)
+
+INSTALLED_APPS += INSTALLED_APPS + EXTERNAL
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
