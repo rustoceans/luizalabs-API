@@ -48,19 +48,19 @@ class PersonList(mixins.ListModelMixin,
         I tried to convert each item, but don't worked.
 
         So, in each iterable, I called:
-            cons.decode()['index']
+            cons.decode_users()['index']
 
         """
-
+        # First called
         cons = Consuming(post_fields['facebook_id'])
         post_fields['username'] = cons.decode_users()['username']
 
-        # First called
+        # Second called
         cons = Consuming(post_fields['facebook_id'])
 
         post_fields.update({'name': cons.decode_users()['name']})
 
-        # Second called
+        # Third called
         cons = Consuming(post_fields['facebook_id'])
 
         post_fields.update({'gender': cons.decode_users()['gender']})
