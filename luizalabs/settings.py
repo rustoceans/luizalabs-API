@@ -44,6 +44,7 @@ INSTALLED_APPS = (
 
 EXTERNAL = (
     'rest_framework',
+    'django_extensions',
 )
 
 INSTALLED_APPS += INSTALLED_APPS + EXTERNAL
@@ -70,6 +71,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+}
+
+# Allowing unrestricted access
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+    )
 }
 
 # Internationalization

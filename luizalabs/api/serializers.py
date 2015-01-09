@@ -1,5 +1,7 @@
 from luizalabs.consuming_facebook.models import Person
 from rest_framework import serializers
+from rest_framework.pagination import *
+from rest_framework import pagination
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -8,7 +10,11 @@ class UserSerializer(serializers.ModelSerializer):
         model = Person
         fields = ('id', 'username', 'name', 'facebook_id', 'gender')
 
-    # def save(self):
-    #     p = Person()
-    #     p.name = 'teste'
-    #     p.save()
+
+class PaginatedUserSerializer(pagination.PaginationSerializer):
+
+    """
+    Serializes page objects of user querysets.
+    """
+    class Meta:
+        object_serializer_class = UserSerializer
