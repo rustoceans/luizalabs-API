@@ -44,7 +44,6 @@ INSTALLED_APPS = (
 
 EXTERNAL = (
     'rest_framework',
-    'django_extensions',
     'reversion',
 )
 
