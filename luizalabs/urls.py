@@ -4,8 +4,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-                       # url(r'^/$', 'luizalabs.views.home', name='home'),
+                       # url(r'^$', 'luizalabs.views.home', name='home'),
 
                        url(r'^admin/', include(admin.site.urls)),
                        url(r'^api/', include('luizalabs.api.urls')),
+                       url(r'^', include('luizalabs.consuming_facebook.urls')),
                        )

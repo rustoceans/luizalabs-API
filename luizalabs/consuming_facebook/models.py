@@ -27,11 +27,6 @@ class Person(AbstractUser):
             facebook_id=self.facebook_id
         )
 
-    # def save(self, *args, **kwargs):
-    #     cons = Consuming(self.facebook_id)
-    #     # self.name = cons.user['name']
-    #     super(Person, self).save(*args, **kwargs)
-
     def get_screen_name(self):
         try:
             if self.user.get_full_name():
