@@ -24,10 +24,10 @@ class PersonList(mixins.ListModelMixin,
 
     queryset = Person.objects.all()
     serializer_class = UserSerializer
-    paginate_by = 10
+    paginate_by = 6
     paginate_by_param = 'limit'
     # Set MAX results per page
-    max_paginate_by = 1
+    max_paginate_by = 3
 
     def get(self, request, *args, **kwargs):
         # users = Person.objects.all()
