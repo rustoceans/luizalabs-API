@@ -8,7 +8,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Person
-        fields = ('id', 'username', 'name', 'facebook_id', 'gender')
+        fields = ('username', 'name', 'facebook_id', 'gender')
 
 
 class PaginatedUserSerializer(pagination.PaginationSerializer):
