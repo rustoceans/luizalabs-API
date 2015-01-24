@@ -1,4 +1,4 @@
-# LuizaLabs Test
+# LuizaLabs API
 
 This app is a test for selection process at Luiza Labs.
 
@@ -40,7 +40,7 @@ In your shell, run:
 All right, we are ready! :smirk:
 
 _____
-Make the download of luizalabs-test.tar.gz tarball file.
+Make the download of luizalabs-alexsander.tar.gz tarball file.
 
 To run, extract all files of tarball file with:
 ```sh
@@ -55,7 +55,7 @@ Create a new folder to create a virtual machine.
 
 Copy and paste the project to current folder /vm/:
 ```sh
-~/luizalabs/vm$ cp -a ~/alexsander ~/luizalabs-alexsander/vm/
+~/luizalabs/vm$ cp -a ~/alexsander/. ~/luizalabs-alexsander/vm/
 ```
 Activate the virtual machine:
 ```sh
